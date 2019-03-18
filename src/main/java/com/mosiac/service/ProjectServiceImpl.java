@@ -6,15 +6,16 @@ import com.mosiac.repo.ProjectRepo;
 import com.mosiac.service.struct.ProjectService;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 
 @Service
 public class ProjectServiceImpl implements ProjectService {
     private ProjectRepo projectRepo;
-    private ProjectServiceImpl(ProjectRepo projectRepo){
+
+    private ProjectServiceImpl(ProjectRepo projectRepo) {
         this.projectRepo = projectRepo;
     }
+
     @Override
     public List<ProjectBean> findAll() {
         return projectRepo.findAll();
@@ -23,7 +24,7 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public List<ProjectBean> saveAll(List<ProjectBean> projectBeans) {
         projectRepo.saveAll(projectBeans);
-        return  projectBeans;
+        return projectBeans;
     }
 
     @Override
