@@ -27,11 +27,12 @@ public class ProjectController {
         return new ResponseEntity<>(projectService.saveAll(projectBeans), header, HttpStatus.OK);
     }
 
-    @GetMapping(path = {"/"})
-    public ResponseEntity<List<ProjectBean>> findAllProjects() {
+    @GetMapping(path = {"/"}, params = {"page","size"})
+    public ResponseEntity<List<ProjectBean>> findAllProjects(@RequestParam("page") int page,
+                                                             @RequestParam("size") int size) {
         HttpHeaders header = new HttpHeaders();
         header.add("Content-type", MediaType.APPLICATION_JSON_VALUE);
-        return new ResponseEntity<>(projectService.findAll(), header, HttpStatus.OK);
+        return new ResponseEntity<>(projectService.findAll(page, size), header, HttpStatus.OK);
     }
 
     @GetMapping(path = {"/schoolNameDescription/{value}"})

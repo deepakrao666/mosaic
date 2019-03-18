@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 public interface ProjectService {
-    List<ProjectBean> findAll();
+    List<ProjectBean> findAll(int page, int size);
 
     List<ProjectBean> saveAll(List<ProjectBean> projectBeans);
 

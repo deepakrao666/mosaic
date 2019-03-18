@@ -4,6 +4,7 @@ package com.mosiac.service;
 import com.mosiac.models.ProjectBean;
 import com.mosiac.repo.ProjectRepo;
 import com.mosiac.service.struct.ProjectService;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,8 +18,8 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public List<ProjectBean> findAll() {
-        return projectRepo.findAll();
+    public List<ProjectBean> findAll(int page, int size) {
+        return projectRepo.findAll(PageRequest.of(page, size));
     }
 
     @Override
