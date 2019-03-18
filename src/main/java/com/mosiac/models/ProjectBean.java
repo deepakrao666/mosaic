@@ -22,12 +22,44 @@ public class ProjectBean {
     private String description;
     private String phaseName;
     private String statusName;
-    private Date phaseActualStartDate;
-    private Date phasePlannedEndDate;
-    private Date phaseActualEndDate;
-    private long budgetAmount;
+    private String phaseActualStartDate;
+    private String phasePlannedEndDate;
+    private String phaseActualEndDate;
+    private String budgetAmount;
     private long finalEstimateActualCostsThroughEndPhaseAmount;
     private long totalPhaseActualSpendingAmount;
     private String dsfNumber;
 
+    public ProjectBean() {
+    }
+
+    public ProjectBean(int geographicDistrict,
+                       String buildingIdentifier,
+                       String schoolName,
+                       String type,
+                       String description,
+                       String phaseName,
+                       String statusName,
+                       String phaseActualStartDate,
+                       String phasePlannedEndDate,
+                       String phaseActualEndDate,
+                       String budgetAmount,
+                       long finalEstimateActualCostsThroughEndPhaseAmount,
+                       long totalPhaseActualSpendingAmount,
+                       String dsfNumber) {
+        this.geographicDistrict = geographicDistrict;
+        this.buildingIdentifier = buildingIdentifier;
+        this.schoolName = schoolName;
+        this.type = type;
+        this.description = description;
+        this.phaseName = phaseName;
+        this.statusName = statusName;
+        this.phaseActualStartDate = phaseActualStartDate;
+        this.phasePlannedEndDate = phasePlannedEndDate;
+        this.phaseActualEndDate = phaseActualEndDate;
+        this.budgetAmount = budgetAmount;
+        this.finalEstimateActualCostsThroughEndPhaseAmount = finalEstimateActualCostsThroughEndPhaseAmount;
+        this.totalPhaseActualSpendingAmount = totalPhaseActualSpendingAmount;
+        this.dsfNumber = dsfNumber;
+    }
 }

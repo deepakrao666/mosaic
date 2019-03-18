@@ -12,13 +12,13 @@ public interface ProjectService {
 
     List<ProjectBean> findAllWithSchoolNameOrDescription(String value);
 
-    List<ProjectBean> findAllWithPhaseActualStartDate(Date date);
+    List<ProjectBean> findAllWithPhaseActualStartDate(String date);
 
-    List<ProjectBean> findAllWithPhasePlannedEndDate(Date date);
+    List<ProjectBean> findAllWithPhasePlannedEndDate(String date);
 
-    List<ProjectBean> findAllWithPhaseActualEndDate(Date date);
+    List<ProjectBean> findAllWithPhaseActualEndDate(String date);
 
-    List<ProjectBean> findAllWithBudgetAmount(long amount);
+    List<ProjectBean> findAllWithBudgetAmount(String amount);
 
     List<ProjectBean> findAllWithFinalEstimateActualCostsThroughEndPhaseAmount(long amount);
 

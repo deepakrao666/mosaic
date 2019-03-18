@@ -44,28 +44,28 @@ public class ProjectController {
     }
 
     @GetMapping(path = {"/phaseActualStartDate/{date}"})
-    public ResponseEntity<List<ProjectBean>> findAllWithPhaseActualStartDate(@PathVariable Date date) {
+    public ResponseEntity<List<ProjectBean>> findAllWithPhaseActualStartDate(@PathVariable String date) {
         HttpHeaders header = new HttpHeaders();
         header.add("Content-type", MediaType.APPLICATION_JSON_VALUE);
         return new ResponseEntity<>(projectService.findAllWithPhaseActualStartDate(date), header, HttpStatus.OK);
     }
 
     @GetMapping(path = {"/phasePlannedEndDate/{date}"})
-    public ResponseEntity<List<ProjectBean>> findAllWithPhasePlannedEndDate(@PathVariable Date date) {
+    public ResponseEntity<List<ProjectBean>> findAllWithPhasePlannedEndDate(@PathVariable String date) {
         HttpHeaders header = new HttpHeaders();
         header.add("Content-type", MediaType.APPLICATION_JSON_VALUE);
         return new ResponseEntity<>(projectService.findAllWithPhasePlannedEndDate(date), header, HttpStatus.OK);
     }
 
     @GetMapping(path = {"/phaseActualEndDate/{date}"})
-    public ResponseEntity<List<ProjectBean>> findAllWithPhaseActualEndDate(@PathVariable Date date) {
+    public ResponseEntity<List<ProjectBean>> findAllWithPhaseActualEndDate(@PathVariable String date) {
         HttpHeaders header = new HttpHeaders();
         header.add("Content-type", MediaType.APPLICATION_JSON_VALUE);
         return new ResponseEntity<>(projectService.findAllWithPhaseActualEndDate(date), header, HttpStatus.OK);
     }
 
     @GetMapping(path = {"/budgetAmount/{amount}"})
-    public ResponseEntity<List<ProjectBean>> findAllWithBudgetAmount(@PathVariable long amount) {
+    public ResponseEntity<List<ProjectBean>> findAllWithBudgetAmount(@PathVariable String amount) {
         HttpHeaders header = new HttpHeaders();
         header.add("Content-type", MediaType.APPLICATION_JSON_VALUE);
         return new ResponseEntity<>(projectService.findAllWithBudgetAmount(amount), header, HttpStatus.OK);

@@ -32,23 +32,23 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public List<ProjectBean> findAllWithPhaseActualStartDate(Date date) {
+    public List<ProjectBean> findAllWithPhaseActualStartDate(String date) {
         return projectRepo.findAllByPhaseActualStartDate(date);
     }
 
     @Override
-    public List<ProjectBean> findAllWithPhasePlannedEndDate(Date date) {
+    public List<ProjectBean> findAllWithPhasePlannedEndDate(String date) {
         return projectRepo.findAllByPhasePlannedEndDate(date);
 
     }
 
     @Override
-    public List<ProjectBean> findAllWithPhaseActualEndDate(Date date) {
+    public List<ProjectBean> findAllWithPhaseActualEndDate(String date) {
         return projectRepo.findAllByPhaseActualEndDate(date);
     }
 
     @Override
-    public List<ProjectBean> findAllWithBudgetAmount(long amount) {
+    public List<ProjectBean> findAllWithBudgetAmount(String amount) {
         return projectRepo.findAllByBudgetAmount(amount);
     }
 
